@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
+:root {
+  --color-primary: #1b0760;
+  --color-text: #918ca4;
+}
+
 *,
 *::before,
 *::after {
@@ -87,6 +92,24 @@ img {
   padding-bottom: 14rem;
 }
 
+.block__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.block__heading {
+  color: var(--color-primary);
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+}
+
+.block__text {
+  color: var(--color-text);
+  font-size: 2.2rem;
+}
+
 /* Grid */
 .grid {
   display: grid;
@@ -124,6 +147,19 @@ img {
 .btn--stretched {
   padding-left: 8rem;
   padding-right: 8rem;
+}
+
+/* Badge */
+.badge {
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 5px 12px;
+}
+
+.badge--secondary {
+  color: #fff;
+  background-color: #00d9ff;
 }
 
 /* Header */
@@ -236,3 +272,81 @@ img {
 }
 
 /* Domains */
+.domain {
+}
+
+.domain__header {
+}
+
+.domain__heading {
+}
+
+.domain__text {
+}
+
+.domain__input-group {
+  background-color: #fff;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border-radius: 100px;
+  display: flex;
+  overflow: hidden;
+  max-width: 670px;
+  margin: 0 auto 4rem;
+}
+
+.domain__input {
+  flex-grow: 1;
+  width: 0;
+  font-size: 2rem;
+  padding: 2rem 4rem;
+  color: var(--color-text);
+  outline: none;
+  border: none;
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+.domain__btn {
+  display: flex;
+  align-items: center;
+}
+
+.domain__btn .icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.domain__prices {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.domain__item {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .domain__prices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .domain__item {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
