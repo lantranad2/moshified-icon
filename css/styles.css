@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--light {
+  fill: #ddd;
+}
+
+/* Collapsible */
+.collapsible__icon {
+  cursor: pointer;
+}
+
+.collapsible__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.collapsible--expanded .collapsible__content {
+  opacity: 1;
+  max-height: 100vh;
+}
+
+@media screen and (min-width: 640px) {
+  .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+  }
+}
+
+/* Header */
+.header {
+  background: #000;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.nav__icon {
+  cursor: pointer;
+}
+
+.collapsible--expanded .nav__icon {
+  box-shadow: 0 0 0 3px #999;
+  border-radius: 6px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav__item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.nav__item:last-of-type {
+  border-bottom: none;
+}
+
+.nav__item a {
+  color: #ccc;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.nav__item a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 640px) {
+  .nav__icon {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav__item {
+    border-bottom: none;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .nav__item:last-of-type {
+    padding-right: 0;
+  }
+
+  .nav__item a {
+    font-size: 1.6rem;
+  }
+}
