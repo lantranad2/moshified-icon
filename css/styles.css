@@ -3,6 +3,7 @@
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
   --color-heading: #1b0760;
   --color-text: #918ca4;
 }
@@ -122,7 +123,7 @@ img {
 }
 
 .block__heading {
-  color: var(--color-primary);
+  color: var(--color-heading);
   font-size: 4rem;
   font-weight: bold;
   line-height: 1.1;
@@ -320,6 +321,69 @@ img {
     font-size: 2.4rem;
   }
 }
+
+/* Quote */
+.quote {
+}
+
+.quote__text {
+  font-style: italic;
+  color: #5c5577;
+  font-size: 2.1rem;
+  margin-bottom: 3rem;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__footer {
+  display: flex;
+  gap: 1rem;
+}
+
+.quote__icon {
+  margin-top: -0.6rem;
+}
+
+.quote__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote__name {
+  color: var(--color-heading);
+}
+
+.quote__company {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.95;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote__text {
+    font-size: 2.4rem;
+  }
+
+  .quote__icon {
+    margin-top: -0.3rem;
+  }
+
+  .quote__name {
+    font-size: 2.4rem;
+  }
+
+  .quote__company {
+    font-size: 1.6rem;
+  }
+}
+
 /*  */
 
 /* Header */
@@ -666,5 +730,39 @@ img {
 
   .showcase__content {
     grid-template-columns: 50% 50%;
+  }
+}
+
+/* Testimonials */
+.testimonials__content {
+  padding: 0 2rem 5rem 2rem;
+}
+
+.testimonials__image {
+  padding: 3rem;
+  position: relative;
+}
+
+.testimonials__icon {
+  background-color: var(--color-accent);
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.testimonials__icon .icon {
+  width: 35px;
+  height: 35px;
+  fill: #fff;
+}
+
+.testimonials__sayings {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonials__content {
+    column-gap: 2rem;
+    padding-bottom: 0;
   }
 }
