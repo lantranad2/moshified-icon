@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 
 :root {
-  --color-primary: #1b0760;
+  --color-primary: #2584ff;
   --color-secondary: #00d9ff;
+  --color-heading: #1b0760;
   --color-text: #918ca4;
 }
 
@@ -46,6 +47,18 @@ img {
 }
 
 /* Icons */
+.icon-container {
+  /* border: 1px solid #f00; */
+
+  background-color: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon {
   width: 40px;
   height: 40px;
@@ -53,6 +66,10 @@ img {
 
 .icon--light {
   fill: #ddd;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
 }
 
 /* Collapsible */
@@ -103,12 +120,12 @@ img {
   font-size: 4rem;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .block__text {
   color: var(--color-text);
-  font-size: 2.2rem;
+  /* font-size: 2.2rem; */
 }
 
 /* Grid */
@@ -246,6 +263,29 @@ img {
 
 .card__body .list {
   margin-left: 3rem;
+}
+
+.link-arrow {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ff3400;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: all 0.2s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
 }
 
 /*  */
@@ -519,5 +559,41 @@ img {
 
   .plan__description {
     font-size: 1.7rem;
+  }
+}
+
+/* Features */
+.feature {
+  gap: 4rem;
+  /* border: 1px solid #f00; */
+  margin: 12rem 0;
+}
+
+.feature__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.feature__heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.feature__description {
+  color: var(--color-text);
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(2n) .feature__content {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .feature__heading {
+    font-size: 2.4rem;
   }
 }
