@@ -166,6 +166,15 @@ img {
   transition: all 0.15s;
 }
 
+.btn--secondary {
+  color: #fff;
+  background-color: var(--color-secondary);
+}
+
+.btn--secondary:hover {
+  background-color: #03c9ec;
+}
+
 .btn--accent {
   color: #fff;
   background-color: #ff3400;
@@ -764,5 +773,37 @@ img {
   .testimonials__content {
     column-gap: 2rem;
     padding-bottom: 0;
+  }
+}
+
+/* Callout */
+.callout {
+  background: var(--color-primary);
+  border-radius: 7px;
+  padding: 5rem 3rem;
+  text-align: center;
+  row-gap: 3rem;
+}
+
+.callout__content {
+  color: #fff;
+}
+
+.callout__heading {
+  margin-bottom: 1rem;
+}
+
+.callout__btn {
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout.grid--1x2 {
+    grid-template-columns: 1fr auto;
+    column-gap: 3rem;
+  }
+
+  .callout__content {
+    text-align: left;
   }
 }
