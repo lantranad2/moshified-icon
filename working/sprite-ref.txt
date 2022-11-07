@@ -1,8 +1,8 @@
 <svg class="icon">
-  <use xlink:href="#chevron"></use>
+  <use xlink:href="#clock"></use>
 </svg>
 <svg class="icon">
-  <use xlink:href="#clock"></use>
+  <use xlink:href="#chevron"></use>
 </svg>
 <svg class="icon">
   <use xlink:href="#computer"></use>
@@ -20,13 +20,10 @@
   <use xlink:href="#menu"></use>
 </svg>
 <svg class="icon">
-  <use xlink:href="#search"></use>
-</svg>
-<svg class="icon">
-  <use xlink:href="#tick"></use>
-</svg>
-<svg class="icon">
   <use xlink:href="#quotes"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#search"></use>
 </svg>
 <svg class="icon">
   <use xlink:href="#settings"></use>
