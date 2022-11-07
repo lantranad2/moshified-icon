@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 
 :root {
   --color-primary: #1b0760;
+  --color-secondary: #00d9ff;
   --color-text: #918ca4;
 }
 
@@ -20,7 +21,7 @@ html {
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -122,6 +123,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .btn {
   text-transform: uppercase;
   border: none;
@@ -132,7 +139,7 @@ img {
   font-weight: 600;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.15s;
+  transition: all 0.15s;
 }
 
 .btn--accent {
@@ -149,6 +156,22 @@ img {
   padding-right: 8rem;
 }
 
+.btn--outlined {
+  color: var(--color-primary);
+  background-color: #fff;
+  border: 2px solid var(--color-primary);
+}
+
+.btn--outlined:hover {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.btn--100 {
+  display: inline-block;
+  width: 100%;
+}
+
 /* Badge */
 .badge {
   font-size: 2rem;
@@ -161,6 +184,71 @@ img {
   color: #fff;
   background-color: #00d9ff;
 }
+
+.badge--small {
+  font-size: 1.6rem;
+  padding: 5px 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
+
+/* List */
+.list {
+  /* padding: 10rem; */
+
+  list-style-type: none;
+}
+
+.list--tick {
+  list-style-image: url("../images/tick.svg");
+}
+
+.list--tick .list__item {
+  padding: 1rem 0 1rem 0.5rem;
+}
+
+/* Card */
+.card {
+  /* margin: 5rem;
+  width: 500px;
+  border: 1px solid #f00; */
+
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  /* overflow: hidden; */
+}
+
+.card--secondary .card__header {
+  background-color: #00d9ff;
+}
+
+.card--secondary .badge--secondary {
+  background-color: #02cdf1;
+}
+
+.card--primary .card__header {
+  background-color: #2584ff;
+}
+
+.card__header,
+.card__body {
+  padding: 3rem 2rem;
+}
+
+.card__header {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.card__body .list {
+  margin-left: 3rem;
+}
+
+/*  */
 
 /* Header */
 .header {
@@ -348,5 +436,88 @@ img {
 
   .domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+/* Plans */
+.plans {
+}
+
+.plans__content {
+  gap: 8rem 4rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.plan {
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular {
+  position: relative;
+  transform: scale(1.1);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+.plan--popular::before {
+  content: url("../images/popular.svg");
+  position: absolute;
+  width: 30px;
+  right: 10px;
+  top: -3px;
+}
+
+.plan__header {
+  color: #fff;
+}
+
+.plan__heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  display: block;
+}
+
+.plan__price {
+  font-size: 5rem;
+}
+
+.plan__bill-cycle {
+  font-size: 2rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.plan__btn {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__heading {
+    font-size: 1.4rem;
+  }
+
+  .plan__bill-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
   }
 }
